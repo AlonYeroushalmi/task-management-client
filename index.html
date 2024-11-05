@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="crudApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Management</title>
+</head>
+<body>
+    <div ng-controller="MainController as main">
+        <h1>Tasks</h1>
+        <button ng-click="navigateTo('/create-task')">Create Task</button>
+        <button ng-click="navigateTo('/get-tasks')">Get Tasks</button>
+        <button ng-click="navigateTo('/update-task')">Update Task</button>
+        <button ng-click="navigateTo('/remove-task')">Remove Task</button>
+    </div>
+
+    <div ng-view></div>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controller.js"></script>
+    <script src="app/app.service.js"></script>
+</body>
+</html>

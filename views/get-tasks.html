@@ -1,0 +1,23 @@
+<h2>Get Tasks</h2>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Completed</th>
+        <th>Status</th>
+        <th>Due Date</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+    </tr>
+    <tr ng-repeat="task in tasks">
+        <td>{{task.title}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.category}}</td>
+        <td>{{task.completed}}</td>
+        <td>{{task.status}}</td>
+        <td>{{task.dueDate | date:'yyyy-MM-dd'}}</td>
+        <td>{{task.createdAt | date:'yyyy-MM-dd'}}</td>
+        <td>{{task.updatedAt | date:'yyyy-MM-dd'}}</td>
+    </tr>
+</table>
